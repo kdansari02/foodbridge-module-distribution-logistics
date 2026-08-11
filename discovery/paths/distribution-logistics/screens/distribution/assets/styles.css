@@ -921,3 +921,13 @@ table.grid td.num, table.grid th.num { text-align: right; font-variant-numeric: 
   .ledger-head .btn-primary { width: 100%; }
   .bal-tiles { grid-template-columns: 1fr; }
 }
+
+/* ==========================================================================
+   Mobile refinements (Route Planning / Logistic Returns)
+   ========================================================================== */
+@media (max-width: 768px) {
+  /* Route Planning: the top "Add Delivery Template" button duplicates the
+     mobile footer action — hide it on mobile so the action lives only in the
+     footer (the search stays). */
+  .filters .btn-primary { display: none; }
+}

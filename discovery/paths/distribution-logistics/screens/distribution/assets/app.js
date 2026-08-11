@@ -414,7 +414,7 @@
       body.querySelector("#sfilter").value = state.sort;
       body.querySelector("#sfilter").addEventListener("change", (e) => { state.sort = e.target.value; drawList(); });
       drawList();
-      footer([{ icon: I.plus, label: "Record", cls: "primary", onClick: () => recordMovementDrawer("") }]);
+      footer(null); // Logistic Returns has no mobile footer — Record lives in the summary header
     }
 
     // ── Tab: Asset Inventory ────────────────────────────────────────────────
@@ -511,7 +511,7 @@
       let deb; body.querySelector("#aq").addEventListener("input", () => { clearTimeout(deb); deb = setTimeout(draw, 160); });
       body.querySelector("#addAsset").addEventListener("click", () => assetForm(null));
       draw();
-      footer([{ icon: I.plus, label: "Add Asset", cls: "primary", onClick: () => assetForm(null) }]);
+      footer(null); // Logistic Returns has no mobile footer — Add Asset lives in the tab toolbar
     }
 
     // ── Asset detail view ───────────────────────────────────────────────────

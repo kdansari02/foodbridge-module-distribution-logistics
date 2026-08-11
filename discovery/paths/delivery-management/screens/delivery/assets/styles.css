@@ -396,5 +396,5 @@ input { font-family: inherit; }
 .route-card .nm { font-size: 17px; letter-spacing: -.01em; }
 .route-card .sub { font-size: 13px; margin-top: 4px; }
 .route-card .route-bar { height: 6px; margin: 14px 0; }
-.route-card .btn { height: 54px; border-radius: 14px; font-size: 15.5px; margin-top: 4px; }
+.route-card .btn { display: flex; width: 100%; justify-content: center; align-items: center; text-align: center; height: 54px; border-radius: 14px; font-size: 15.5px; margin-top: 4px; }
 .route-card .status-tag { align-self: flex-start; }
