@@ -1,0 +1,79 @@
+[
+  {
+    "id": "p-250",
+    "name": "250ML PET",
+    "unit": "Bottle",
+    "price": 10.5,
+    "truck": 1
+  },
+  {
+    "id": "p-500",
+    "name": "500ML PET",
+    "unit": "Bottle",
+    "price": 15.75,
+    "truck": 2
+  },
+  {
+    "id": "p-1l",
+    "name": "1LTR BOTTLE",
+    "unit": "Bottle",
+    "price": 21,
+    "truck": 0
+  },
+  {
+    "id": "p-nat",
+    "name": "NATURAL WATER",
+    "unit": "Bottle",
+    "price": 60,
+    "truck": 0
+  },
+  {
+    "id": "p-soda",
+    "name": "SODA 650ML",
+    "unit": "Bottle",
+    "price": 20,
+    "truck": 0
+  },
+  {
+    "id": "p-mini",
+    "name": "Mini Bread 100gm",
+    "unit": "Pc",
+    "price": 8,
+    "truck": 0
+  },
+  {
+    "id": "p-milk",
+    "name": "Milk Bread 200gm",
+    "unit": "Pc",
+    "price": 15,
+    "truck": 0
+  },
+  {
+    "id": "p-jumbo",
+    "name": "Jumbo Bread 750gm",
+    "unit": "Pc",
+    "price": 45,
+    "truck": 0
+  },
+  {
+    "id": "p-toast",
+    "name": "Toast (TR, Jeera, Suji) 200gm",
+    "unit": "Pc",
+    "price": 35,
+    "truck": 0
+  },
+  {
+    "id": "p-milktoast",
+    "name": "Milk Toast 300gm (10pcs) (Std pkt)",
+    "unit": "Pc",
+    "price": 40,
+    "truck": 0
+  },
+  {
+    "id": "p-pineapple",
+    "name": "Pineapple Toast 225gm",
+    "unit": "Pc",
+    "price": 30,
+    "truck": 0
+  }
+]

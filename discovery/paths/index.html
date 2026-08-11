@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Distribution &amp; Logistics — Discovery Paths</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root { --teal:#12615e; --green:#047857; --ink:#0f172a; --muted:#64748b; --line:#e5e7eb; --card:#fff; --bg:#f6f8f9; }
+    * { box-sizing:border-box; }
+    body { margin:0; font-family:"Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif; background:var(--bg); color:var(--ink); }
+    .wrap { max-width:1000px; margin:0 auto; padding:48px 20px 80px; }
+    .kicker { color:var(--green); font-weight:700; letter-spacing:.06em; text-transform:uppercase; font-size:12px; }
+    h1 { font-size:30px; margin:8px 0 6px; letter-spacing:-.02em; }
+    .lead { color:var(--muted); font-size:15px; max-width:640px; margin:0 0 8px; }
+    .ver { display:inline-block; margin-top:6px; padding:4px 12px; border-radius:999px; background:#ecfdf5; color:var(--green); font-weight:700; font-size:12px; }
+    .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:18px; margin-top:30px; }
+    .card { background:var(--card); border:1px solid var(--line); border-radius:18px; padding:22px; box-shadow:0 1px 2px rgba(16,24,40,.05); display:flex; flex-direction:column; }
+    .card .ic { width:50px; height:50px; border-radius:13px; background:#ecfdf5; display:grid; place-items:center; font-size:26px; margin-bottom:14px; }
+    .card h3 { margin:0 0 4px; font-size:18px; }
+    .card .tag { font-size:11px; font-weight:700; color:var(--muted); text-transform:uppercase; letter-spacing:.04em; }
+    .card p { color:var(--muted); font-size:13.5px; margin:8px 0 16px; flex:1; }
+    .links { display:flex; flex-direction:column; gap:8px; }
+    .links a { display:flex; align-items:center; justify-content:space-between; padding:11px 14px; border:1px solid var(--line); border-radius:10px; color:var(--ink); text-decoration:none; font-weight:600; font-size:14px; transition:border-color .15s, background .15s; }
+    .links a:hover { border-color:var(--teal); background:#f0fdfa; }
+    .links a .go { color:var(--teal); }
+    .links a.primary { background:var(--teal); color:#fff; border-color:var(--teal); }
+    .links a.primary .go { color:#fff; }
+    .route { font-family:ui-monospace,monospace; font-size:11px; color:var(--green); margin-top:12px; }
+    .foot { margin-top:36px; padding-top:18px; border-top:1px solid var(--line); font-size:13px; color:var(--muted); }
+    .foot code { background:#f1f5f9; padding:2px 6px; border-radius:5px; }
+    .mobtag { display:inline-block; font-size:10px; font-weight:700; color:#b45309; background:#fef3c7; padding:2px 8px; border-radius:999px; margin-left:6px; vertical-align:middle; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="kicker">FoodBridge · Discovery</div>
+    <h1>Distribution &amp; Logistics</h1>
+    <p class="lead">HTML replica of the live "QA store" Distribution&nbsp;&amp;&nbsp;Logistics module. Three areas — desktop admin (Route Planning, Logistic Returns) and the driver's mobile Route Delivery app — all working against seed data, no build step.</p>
+    <span class="ver">Discovery · working-actions</span>
+
+    <div class="grid">
+      <div class="card">
+        <div class="ic">🗺️</div>
+        <div class="tag">Desktop admin</div>
+        <h3>Route Planning</h3>
+        <p>Delivery Templates table with add/edit drawer (multi-select customers &amp; staff with assignment badges) and delete.</p>
+        <div class="links"><a class="primary" href="distribution-logistics/screens/distribution/route-planning.html">Open Route Planning <span class="go">→</span></a></div>
+        <div class="route">/platform/manage-routes</div>
+      </div>
+
+      <div class="card">
+        <div class="ic">♻️</div>
+        <div class="tag">Desktop admin</div>
+        <h3>Logistic Returns</h3>
+        <p>Asset Movement / Asset Inventory / Assets tabs, Record Asset Movement wizard, Add asset drawer, asset detail &amp; the full customer ledger page.</p>
+        <div class="links"><a class="primary" href="distribution-logistics/screens/distribution/logistic-returns.html">Open Logistic Returns <span class="go">→</span></a></div>
+        <div class="route">/platform/reverse-logistics/dashboard</div>
+      </div>
+
+      <div class="card">
+        <div class="ic">📱</div>
+        <div class="tag">Driver app <span class="mobtag">mobile only</span></div>
+        <h3>Delivery Management</h3>
+        <p>The full Route Delivery lifecycle: load stock → deliver → collect payment → restock → settle → route report. Best viewed narrow / device toolbar.</p>
+        <div class="links"><a class="primary" href="delivery-management/screens/delivery/index.html">Open Route Delivery app <span class="go">→</span></a></div>
+        <div class="route">/route-delivery</div>
+      </div>
+
+      <div class="card">
+        <div class="ic">🗂️</div>
+        <div class="tag">Path overviews</div>
+        <h3>Screen indexes</h3>
+        <p>The per-path landing pages with every screen card, plus the version snapshots.</p>
+        <div class="links">
+          <a href="distribution-logistics/screens/distribution/index.html">distribution-logistics overview <span class="go">→</span></a>
+          <a href="delivery-management/screens/delivery/index.html">delivery-management app <span class="go">→</span></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="foot">
+      Source components: <code>ManageRoutes.jsx</code>, <code>ReverseLogisticDashboard.jsx</code>, <code>ReturnableProducts.jsx</code>, <code>route-delivery-app/</code>.
+      Paths live under <code>discovery/paths/</code>. Seed data in each path's <code>assets/data.js</code>.
+    </div>
+  </div>
+</body>
+</html>

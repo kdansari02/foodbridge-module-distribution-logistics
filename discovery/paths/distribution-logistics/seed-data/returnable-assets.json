@@ -1,0 +1,20 @@
+[
+  {
+    "id": "a-crate",
+    "name": "Crate",
+    "articleNo": "OsSa5a",
+    "category": "RETURNABLE",
+    "unit": "Crate",
+    "baseUnit": "undefined",
+    "barcode": "",
+    "hsn": "",
+    "brand": "",
+    "status": "ACTIVE",
+    "price": 0,
+    "taxRate": 0,
+    "warehouse": 104,
+    "withCustomers": 10,
+    "description": "",
+    "img": "crate,plastic"
+  }
+]

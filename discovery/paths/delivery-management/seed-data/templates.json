@@ -1,0 +1,200 @@
+[
+  {
+    "id": "t-pune",
+    "name": "Pune Route",
+    "staff": 0,
+    "stops": []
+  },
+  {
+    "id": "t-cgh",
+    "name": "Chandigargh Route",
+    "staff": 2,
+    "stops": [
+      {
+        "name": "Sharma Kirana",
+        "phone": "9812345670",
+        "order": [
+          {
+            "productId": "p-500",
+            "qty": 6
+          }
+        ]
+      },
+      {
+        "name": "Gupta Stores",
+        "phone": "9812345671",
+        "order": [
+          {
+            "productId": "p-1l",
+            "qty": 4
+          }
+        ]
+      },
+      {
+        "name": "Verma General",
+        "phone": "9812345672",
+        "order": [
+          {
+            "productId": "p-250",
+            "qty": 12
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "t-dadar",
+    "name": "Dadar Route",
+    "staff": 2,
+    "stops": [
+      {
+        "name": "Dadar Kirana",
+        "phone": "9800011111",
+        "order": [
+          {
+            "productId": "p-mini",
+            "qty": 15
+          }
+        ]
+      },
+      {
+        "name": "Sea View Store",
+        "phone": "9800022222",
+        "order": [
+          {
+            "productId": "p-soda",
+            "qty": 6
+          }
+        ]
+      },
+      {
+        "name": "Plaza Mart",
+        "phone": "9800033333",
+        "order": [
+          {
+            "productId": "p-500",
+            "qty": 10
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "t-sangola",
+    "name": "Sangola Route - 23 Jun 2026 11:51",
+    "staff": 1,
+    "stops": [
+      {
+        "name": "Sangola General",
+        "phone": "9700011111",
+        "order": [
+          {
+            "productId": "p-1l",
+            "qty": 6
+          }
+        ]
+      },
+      {
+        "name": "Bus Stand Store",
+        "phone": "9700022222",
+        "order": [
+          {
+            "productId": "p-250",
+            "qty": 20
+          }
+        ]
+      },
+      {
+        "name": "Market Kirana",
+        "phone": "9700033333",
+        "order": [
+          {
+            "productId": "p-mini",
+            "qty": 8
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "t-asdf",
+    "name": "asdfasdf - 23 Jun 2026 13:09",
+    "staff": 1,
+    "stops": [
+      {
+        "name": "Test Shop",
+        "phone": "9600011111",
+        "order": [
+          {
+            "productId": "p-500",
+            "qty": 4
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "t-asdf5",
+    "name": "asdf55555 - 23 Jun 2026 13:11",
+    "staff": 1,
+    "stops": [
+      {
+        "name": "Demo Store A",
+        "phone": "9500011111",
+        "order": [
+          {
+            "productId": "p-mini",
+            "qty": 5
+          }
+        ]
+      },
+      {
+        "name": "Demo Store B",
+        "phone": "9500022222",
+        "order": [
+          {
+            "productId": "p-soda",
+            "qty": 3
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "t-hadapsar",
+    "name": "Hadapsar Route",
+    "staff": 3,
+    "stops": [
+      {
+        "name": "Hadapsar Kirana",
+        "phone": "9400011111",
+        "order": [
+          {
+            "productId": "p-500",
+            "qty": 8
+          }
+        ]
+      },
+      {
+        "name": "Magarpatta Store",
+        "phone": "9400022222",
+        "order": [
+          {
+            "productId": "p-1l",
+            "qty": 6
+          }
+        ]
+      },
+      {
+        "name": "Amanora Mart",
+        "phone": "9400033333",
+        "order": [
+          {
+            "productId": "p-250",
+            "qty": 14
+          }
+        ]
+      }
+    ]
+  }
+]

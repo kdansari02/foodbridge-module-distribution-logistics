@@ -1,0 +1,42 @@
+<!doctype html>
+<!--
+  DISCOVERY SCREEN — Foodbridge Module Distribution Logistics — "Screen 01"
+  Standalone-openable: open this file directly to review the screen in isolation.
+  Also reachable from the wiring hub (../index.html).
+  Declare this screen's outgoing transitions here (they become the proto-FSM that
+  SSOT-1 / SSOT-5 are derived from), e.g.:
+    - <primary action> → screen-02.html
+  Rules: HTML/CSS/vanilla JS only. No frameworks, no build step, no real API calls.
+  Use ../seed-data/seed.json for data. Disposable — informs the SSOTs, not imported by development/.
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Foodbridge Module Distribution Logistics — Screen 01</title>
+  <style>
+    :root { color-scheme: light dark; }
+    body { font-family: system-ui, sans-serif; margin: 0; padding: 2rem; max-width: 720px; }
+    h1 { font-size: 1.25rem; }
+    .card { border: 1px solid #ddd; border-radius: 8px; padding: 1rem; margin: 0.5rem 0; }
+    .note { color: #666; font-size: 0.85rem; }
+  </style>
+</head>
+<body>
+  <h1>Foodbridge Module Distribution Logistics — Screen 01</h1>
+  <p class="note">Describe in one sentence what this screen lets the user do.</p>
+
+  <div id="app"></div>
+
+  <script>
+    fetch('../seed-data/seed.json')
+      .then((r) => r.json())
+      .then((seed) => {
+        const app = document.getElementById('app');
+        app.innerHTML = seed.items
+          .map((item) => `<div class="card"><strong>${item.title}</strong><p>${item.description}</p></div>`)
+          .join('');
+      });
+  </script>
+</body>
+</html>

@@ -1,0 +1,72 @@
+{
+  "id": "dr-1",
+  "name": "Viman Nagar Morning Route",
+  "staff": "Nishant Devekar",
+  "date": "2026-08-11",
+  "vehicle": "MH12 AB 4432",
+  "stops": [
+    {
+      "seq": 1,
+      "customerId": "c-dinesh",
+      "name": "Dinesh Store",
+      "address": "Shop 4, Viman Nagar Rd",
+      "amount": 2450,
+      "items": 12,
+      "status": "delivered"
+    },
+    {
+      "seq": 2,
+      "customerId": "c-rana",
+      "name": "Rana Store",
+      "address": "Lane 6, Clover Park",
+      "amount": 1820,
+      "items": 8,
+      "status": "delivered"
+    },
+    {
+      "seq": 3,
+      "customerId": "c-raman",
+      "name": "Raman",
+      "address": "Nagar Rd, near Phoenix",
+      "amount": 640,
+      "items": 3,
+      "status": "pending"
+    },
+    {
+      "seq": 4,
+      "customerId": "c-aaimata",
+      "name": "Aai Mata General Store",
+      "address": "Datta Mandir Chowk",
+      "amount": 3110,
+      "items": 16,
+      "status": "pending"
+    },
+    {
+      "seq": 5,
+      "customerId": "c-ganraj",
+      "name": "Ganraj Kirana Mart",
+      "address": "Kharadi Bypass",
+      "amount": 980,
+      "items": 5,
+      "status": "pending"
+    },
+    {
+      "seq": 6,
+      "customerId": "c-laxmi",
+      "name": "Laxmi Provision Store",
+      "address": "Wadgaon Sheri",
+      "amount": 1560,
+      "items": 7,
+      "status": "pending"
+    },
+    {
+      "seq": 7,
+      "customerId": "c-raj",
+      "name": "Raj Traders",
+      "address": "Yerwada Main Rd",
+      "amount": 2240,
+      "items": 11,
+      "status": "pending"
+    }
+  ]
+}

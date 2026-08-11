@@ -1,0 +1,7 @@
+{
+  "_comment": "Fake but representative data used only in discovery role-play. Never imported by development/.",
+  "items": [
+    { "id": "seed-1", "title": "Example item one", "description": "Replace with a realistic example for this module's domain." },
+    { "id": "seed-2", "title": "Example item two", "description": "Add enough variety to cover the edge cases you want to role-play." }
+  ]
+}

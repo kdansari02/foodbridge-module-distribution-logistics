@@ -1,0 +1,122 @@
+[
+  {
+    "id": "c-dinesh",
+    "name": "Dinesh Store",
+    "phone": "9087654454"
+  },
+  {
+    "id": "c-rana",
+    "name": "Rana Store",
+    "phone": "5655445654"
+  },
+  {
+    "id": "c-raman",
+    "name": "Raman",
+    "phone": "985673456"
+  },
+  {
+    "id": "c-newcust",
+    "name": "a new customer",
+    "phone": "9384594893"
+  },
+  {
+    "id": "c-aaimata",
+    "name": "Aai Mata General Store",
+    "phone": "82736450195"
+  },
+  {
+    "id": "c-ganraj",
+    "name": "Ganraj Kirana Mart",
+    "phone": "41589627074"
+  },
+  {
+    "id": "c-shreeram",
+    "name": "Shree Ram Super Market",
+    "phone": "56820973184"
+  },
+  {
+    "id": "c-newbharat",
+    "name": "New Bharat General Store",
+    "phone": "64082719536"
+  },
+  {
+    "id": "c-laxmi",
+    "name": "Laxmi Provision Store",
+    "phone": "97315042861"
+  },
+  {
+    "id": "c-raj",
+    "name": "Raj Traders",
+    "phone": "53197286440"
+  },
+  {
+    "id": "c-shivam",
+    "name": "Shivam Grocery Store",
+    "phone": "28946175318"
+  },
+  {
+    "id": "c-shreedatta",
+    "name": "Shree Datta Super Store",
+    "phone": "70631984512"
+  },
+  {
+    "id": "c-balaji",
+    "name": "Balaji General Store",
+    "phone": "85273140697"
+  },
+  {
+    "id": "c-krishna",
+    "name": "Krishna Kirana & General Store",
+    "phone": "19468572033"
+  },
+  {
+    "id": "c-omsai",
+    "name": "Om Sai Provision Store",
+    "phone": "34786019254"
+  },
+  {
+    "id": "c-mahalakshmi",
+    "name": "Mahalakshmi Super Mart",
+    "phone": "62819475306"
+  },
+  {
+    "id": "c-gajanan",
+    "name": "Gajanan General Store",
+    "phone": "76184530928"
+  },
+  {
+    "id": "c-ganesh",
+    "name": "Shree Ganesh Kirana",
+    "phone": "91527364081"
+  },
+  {
+    "id": "c-manjit",
+    "name": "Manjit Store",
+    "phone": "48392017465"
+  },
+  {
+    "id": "c-kunal",
+    "name": "Kunal Sweet Shop",
+    "phone": "3426645432"
+  },
+  {
+    "id": "c-manish",
+    "name": "Manish",
+    "phone": "655655656565"
+  },
+  {
+    "id": "c-raghav",
+    "name": "Raghav",
+    "phone": "666633373"
+  },
+  {
+    "id": "c-shubham",
+    "name": "Shubham Kashid",
+    "phone": "75072073487"
+  },
+  {
+    "id": "c-test",
+    "name": "Test",
+    "phone": "1521521521"
+  }
+]

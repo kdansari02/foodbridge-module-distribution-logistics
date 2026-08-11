@@ -1,0 +1,52 @@
+<!doctype html>
+<!--
+  DISCOVERY WIRING — Foodbridge Module Distribution Logistics
+  ---------------------------------------------------------
+  This file is the WIRING only — the hub + transition map. It holds NO screen
+  content; screens live in screens/. The transition map below is the proto-FSM
+  that SSOT-1 (state-machine) and SSOT-5 (workflow) are later derived from.
+  Rules:
+  - HTML/CSS/vanilla JS only. No frameworks, no build step, no real API calls.
+  - Screens are standalone-openable and link to each other; this hub is the entry.
+  - Use seed-data/seed.json for any data.
+  - Disposable. When a version is accepted, snapshot the whole folder
+    (screens/ + index.html + seed-data) into versions/vN/.
+  - Nothing here is imported by development/. It only informs the SSOTs.
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Foodbridge Module Distribution Logistics — Discovery (wiring)</title>
+  <style>
+    :root { color-scheme: light dark; }
+    body { font-family: system-ui, sans-serif; margin: 0; padding: 2rem; max-width: 720px; }
+    h1 { font-size: 1.25rem; }
+    h2 { font-size: 1rem; margin-top: 1.5rem; }
+    .note { color: #666; font-size: 0.85rem; }
+    a { color: #06c; }
+    table { border-collapse: collapse; width: 100%; font-size: 0.9rem; }
+    th, td { border: 1px solid #ddd; padding: 0.4rem 0.6rem; text-align: left; }
+  </style>
+</head>
+<body>
+  <h1>Foodbridge Module Distribution Logistics — Discovery Prototype (wiring hub)</h1>
+  <p class="note">Iteration goal: describe in one sentence what user problem this iteration is testing.</p>
+
+  <h2>Screens</h2>
+  <ul>
+    <li><a href="screens/screen-01.html">Screen 01</a> — entry screen (add more under screens/)</li>
+  </ul>
+  <p><a href="screens/screen-01.html"><strong>▶ Start the flow →</strong></a></p>
+
+  <h2>Transition map (→ SSOT-1 state-machine / SSOT-5 workflow)</h2>
+  <table>
+    <thead><tr><th>From screen / state</th><th>Event</th><th>To</th></tr></thead>
+    <tbody>
+      <tr><td>Screen 01</td><td>&lt;primary action&gt;</td><td>&lt;next screen / state&gt;</td></tr>
+    </tbody>
+  </table>
+  <p class="note">Fill this table as you add screens — it is the flow the FSM/workflow SSOTs derive from.
+  Data for every screen comes from <a href="seed-data/seed.json">seed-data/seed.json</a>.</p>
+</body>
+</html>

@@ -1,0 +1,429 @@
+[
+  {
+    "id": "r-cgh",
+    "name": "Chandigarh Route",
+    "date": "2026-08-11",
+    "time": "13:06",
+    "status": "in-progress",
+    "beatArea": "Chandigarh Route",
+    "startedAt": "13:06",
+    "stockLoaded": 60,
+    "openingCash": 500,
+    "stops": [
+      {
+        "id": "st-1",
+        "name": "Sharma Kirana",
+        "phone": "9812345670",
+        "order": [
+          {
+            "productId": "p-500",
+            "qty": 6
+          },
+          {
+            "productId": "p-mini",
+            "qty": 10
+          }
+        ],
+        "status": "delivered",
+        "collected": 0,
+        "paymentMode": null,
+        "overPayment": 0,
+        "addedOnRoute": false
+      },
+      {
+        "id": "st-2",
+        "name": "Gupta Stores",
+        "phone": "9812345671",
+        "order": [
+          {
+            "productId": "p-1l",
+            "qty": 4
+          }
+        ],
+        "status": "delivered",
+        "collected": 0,
+        "paymentMode": null,
+        "overPayment": 0,
+        "addedOnRoute": false
+      },
+      {
+        "id": "st-3",
+        "name": "Verma General",
+        "phone": "9812345672",
+        "order": [
+          {
+            "productId": "p-250",
+            "qty": 12
+          }
+        ],
+        "status": "pending",
+        "collected": 0,
+        "paymentMode": null,
+        "overPayment": 0,
+        "addedOnRoute": false
+      }
+    ],
+    "collected": 222
+  },
+  {
+    "id": "r-route1",
+    "name": "route1",
+    "date": "2026-08-11",
+    "time": "12:57",
+    "status": "in-progress",
+    "beatArea": "route1",
+    "stockLoaded": 20,
+    "openingCash": 300,
+    "stops": [
+      {
+        "id": "st-r1",
+        "name": "Rana Store",
+        "phone": "5655445654",
+        "order": [
+          {
+            "productId": "p-500",
+            "qty": 4
+          }
+        ],
+        "status": "pending",
+        "collected": 0,
+        "paymentMode": null,
+        "overPayment": 0,
+        "addedOnRoute": false
+      }
+    ],
+    "collected": 0
+  },
+  {
+    "id": "r-mr66",
+    "name": "Morning Route 66",
+    "date": "2026-08-11",
+    "time": null,
+    "status": "ready",
+    "beatArea": "Morning Route 66",
+    "stockLoaded": 0,
+    "openingCash": 0,
+    "stops": [
+      {
+        "id": "st-dinesh",
+        "name": "Dinesh Store",
+        "phone": "9087654454",
+        "order": [
+          {
+            "productId": "p-mini",
+            "qty": 47
+          }
+        ],
+        "status": "pending",
+        "collected": 0,
+        "paymentMode": null,
+        "overPayment": 0,
+        "addedOnRoute": false,
+        "credit": 428
+      }
+    ],
+    "collected": 0,
+    "proxyStock": [
+      {
+        "productId": "p-mini",
+        "qty": 47
+      }
+    ]
+  },
+  {
+    "id": "r-evening",
+    "name": "Evening Route",
+    "date": "2026-08-11",
+    "time": null,
+    "status": "ready",
+    "beatArea": "Evening Route",
+    "stockLoaded": 0,
+    "openingCash": 0,
+    "stops": [
+      {
+        "id": "st-ev",
+        "name": "Ganraj Kirana Mart",
+        "phone": "41589627074",
+        "order": [
+          {
+            "productId": "p-1l",
+            "qty": 8
+          }
+        ],
+        "status": "pending",
+        "collected": 0,
+        "paymentMode": null,
+        "overPayment": 0,
+        "addedOnRoute": false
+      }
+    ],
+    "collected": 0,
+    "proxyStock": [
+      {
+        "productId": "p-1l",
+        "qty": 8
+      }
+    ]
+  },
+  {
+    "id": "r-mr76",
+    "name": "Morning Route 76",
+    "date": "2026-08-11",
+    "time": null,
+    "status": "ready",
+    "beatArea": "Morning Route 76",
+    "stockLoaded": 0,
+    "openingCash": 0,
+    "stops": [
+      {
+        "id": "st-76",
+        "name": "Balaji General Store",
+        "phone": "85273140697",
+        "order": [
+          {
+            "productId": "p-500",
+            "qty": 6
+          }
+        ],
+        "status": "pending",
+        "collected": 0,
+        "paymentMode": null,
+        "overPayment": 0,
+        "addedOnRoute": false
+      }
+    ],
+    "collected": 0,
+    "proxyStock": [
+      {
+        "productId": "p-500",
+        "qty": 6
+      }
+    ]
+  },
+  {
+    "id": "r-mr3",
+    "name": "Morning Route 3",
+    "date": "2026-08-11",
+    "time": null,
+    "status": "ready",
+    "beatArea": "Morning Route 3",
+    "stockLoaded": 0,
+    "openingCash": 0,
+    "stops": [
+      {
+        "id": "st-mr3",
+        "name": "Krishna Kirana",
+        "phone": "19468572033",
+        "order": [
+          {
+            "productId": "p-mini",
+            "qty": 5
+          }
+        ],
+        "status": "pending",
+        "collected": 0,
+        "paymentMode": null,
+        "overPayment": 0,
+        "addedOnRoute": false
+      }
+    ],
+    "collected": 0,
+    "proxyStock": [
+      {
+        "productId": "p-mini",
+        "qty": 5
+      }
+    ]
+  },
+  {
+    "id": "r-mr",
+    "name": "Morning Route",
+    "date": "2026-08-11",
+    "time": null,
+    "status": "ready",
+    "beatArea": "Morning Route",
+    "stockLoaded": 0,
+    "openingCash": 0,
+    "stops": [
+      {
+        "id": "st-mr",
+        "name": "Manjit Store",
+        "phone": "48392017465",
+        "order": [
+          {
+            "productId": "p-soda",
+            "qty": 6
+          }
+        ],
+        "status": "pending",
+        "collected": 0,
+        "paymentMode": null,
+        "overPayment": 0,
+        "addedOnRoute": false
+      }
+    ],
+    "collected": 0,
+    "proxyStock": [
+      {
+        "productId": "p-soda",
+        "qty": 6
+      }
+    ]
+  },
+  {
+    "id": "r-stock",
+    "name": "Ttttyyy",
+    "date": "2026-08-11",
+    "time": null,
+    "status": "stock",
+    "beatArea": "Ttttyyy",
+    "stockLoaded": 0,
+    "openingCash": 0,
+    "stops": [
+      {
+        "id": "st-s1",
+        "name": "Kunal Sweet Shop",
+        "phone": "3426645432",
+        "order": [
+          {
+            "productId": "p-mini",
+            "qty": 10
+          }
+        ],
+        "status": "pending",
+        "collected": 0,
+        "paymentMode": null,
+        "overPayment": 0,
+        "addedOnRoute": false
+      },
+      {
+        "id": "st-s2",
+        "name": "Shree Ram Super Market",
+        "phone": "56820973184",
+        "order": [
+          {
+            "productId": "p-500",
+            "qty": 8
+          }
+        ],
+        "status": "pending",
+        "collected": 0,
+        "paymentMode": null,
+        "overPayment": 0,
+        "addedOnRoute": false
+      },
+      {
+        "id": "st-s3",
+        "name": "Raj Traders",
+        "phone": "53197286440",
+        "order": [
+          {
+            "productId": "p-1l",
+            "qty": 4
+          }
+        ],
+        "status": "pending",
+        "collected": 0,
+        "paymentMode": null,
+        "overPayment": 0,
+        "addedOnRoute": false
+      },
+      {
+        "id": "st-s4",
+        "name": "Laxmi Provision Store",
+        "phone": "97315042861",
+        "order": [
+          {
+            "productId": "p-250",
+            "qty": 12
+          }
+        ],
+        "status": "pending",
+        "collected": 0,
+        "paymentMode": null,
+        "overPayment": 0,
+        "addedOnRoute": false
+      }
+    ],
+    "collected": 0,
+    "proxyStock": [
+      {
+        "productId": "p-mini",
+        "qty": 10
+      },
+      {
+        "productId": "p-500",
+        "qty": 8
+      },
+      {
+        "productId": "p-1l",
+        "qty": 4
+      },
+      {
+        "productId": "p-250",
+        "qty": 12
+      }
+    ]
+  },
+  {
+    "id": "r-vnc",
+    "name": "Viman Nagar Clubed Orders",
+    "date": "2026-08-11",
+    "time": null,
+    "status": "closed",
+    "beatArea": "Viman Nagar Clubed Orders",
+    "stockLoaded": 80,
+    "openingCash": 500,
+    "stops": [
+      {
+        "id": "st-v1",
+        "name": "Dinesh Store",
+        "phone": "9087654454",
+        "order": [
+          {
+            "productId": "p-mini",
+            "qty": 20
+          }
+        ],
+        "status": "delivered",
+        "collected": 0,
+        "paymentMode": null,
+        "overPayment": 0,
+        "addedOnRoute": false
+      },
+      {
+        "id": "st-v2",
+        "name": "Rana Store",
+        "phone": "5655445654",
+        "order": [
+          {
+            "productId": "p-500",
+            "qty": 12
+          }
+        ],
+        "status": "delivered",
+        "collected": 0,
+        "paymentMode": null,
+        "overPayment": 0,
+        "addedOnRoute": false
+      },
+      {
+        "id": "st-v3",
+        "name": "Raman",
+        "phone": "985673456",
+        "order": [
+          {
+            "productId": "p-1l",
+            "qty": 6
+          }
+        ],
+        "status": "delivered",
+        "collected": 0,
+        "paymentMode": null,
+        "overPayment": 0,
+        "addedOnRoute": false
+      }
+    ],
+    "collected": 0
+  }
+]

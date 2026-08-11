@@ -1,0 +1,250 @@
+[
+  {
+    "id": "c-kunal",
+    "name": "Kunal Sweet Shop",
+    "phone": "3426645432",
+    "reverseLogistics": [
+      {
+        "assetId": "a-crate",
+        "assetName": "Crate",
+        "articleNo": "OsSa5a",
+        "measurement": "Crate",
+        "issued": 10,
+        "returned": 9,
+        "outstanding": 1,
+        "lastTransactionDate": "2026-08-10",
+        "deliveredBy": "Mahesh",
+        "ledger": [
+          {
+            "type": "FORWARD",
+            "qty": 10,
+            "date": "2026-08-05",
+            "time": "8:15 PM",
+            "invoice": "",
+            "remarks": ""
+          },
+          {
+            "type": "REVERSE",
+            "qty": 5,
+            "date": "2026-08-05",
+            "time": "8:16 PM",
+            "invoice": "",
+            "remarks": ""
+          },
+          {
+            "type": "REVERSE",
+            "qty": 3,
+            "date": "2026-08-10",
+            "time": "10:55 AM",
+            "invoice": "",
+            "remarks": ""
+          },
+          {
+            "type": "REVERSE",
+            "qty": 1,
+            "date": "2026-08-10",
+            "time": "10:56 AM",
+            "invoice": "",
+            "remarks": ""
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "c-manish",
+    "name": "Manish",
+    "phone": "655655656565",
+    "reverseLogistics": [
+      {
+        "assetId": "a-crate",
+        "assetName": "Crate",
+        "articleNo": "OsSa5a",
+        "measurement": "Crate",
+        "issued": 15,
+        "returned": 15,
+        "outstanding": 0,
+        "lastTransactionDate": "2026-06-02",
+        "deliveredBy": "Mahesh",
+        "ledger": [
+          {
+            "type": "FORWARD",
+            "qty": 15,
+            "date": "2026-05-20",
+            "time": "9:10 AM",
+            "invoice": "",
+            "remarks": ""
+          },
+          {
+            "type": "REVERSE",
+            "qty": 15,
+            "date": "2026-06-02",
+            "time": "4:30 PM",
+            "invoice": "",
+            "remarks": ""
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "c-raghav",
+    "name": "Raghav",
+    "phone": "666633373",
+    "reverseLogistics": [
+      {
+        "assetId": "a-crate",
+        "assetName": "Crate",
+        "articleNo": "OsSa5a",
+        "measurement": "Crate",
+        "issued": 10,
+        "returned": 10,
+        "outstanding": 0,
+        "lastTransactionDate": "2026-06-02",
+        "deliveredBy": "Mahesh",
+        "ledger": [
+          {
+            "type": "FORWARD",
+            "qty": 10,
+            "date": "2026-05-18",
+            "time": "11:00 AM",
+            "invoice": "",
+            "remarks": ""
+          },
+          {
+            "type": "REVERSE",
+            "qty": 10,
+            "date": "2026-06-02",
+            "time": "5:00 PM",
+            "invoice": "",
+            "remarks": ""
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "c-shreeram",
+    "name": "Shree Ram Super Market",
+    "phone": "56820973184",
+    "reverseLogistics": [
+      {
+        "assetId": "a-crate",
+        "assetName": "Crate",
+        "articleNo": "OsSa5a",
+        "measurement": "Crate",
+        "issued": 30,
+        "returned": 26,
+        "outstanding": 4,
+        "lastTransactionDate": "2026-08-11",
+        "deliveredBy": "Mahesh",
+        "ledger": [
+          {
+            "type": "FORWARD",
+            "qty": 18,
+            "date": "2026-06-30",
+            "time": "10:20 AM",
+            "invoice": "",
+            "remarks": ""
+          },
+          {
+            "type": "REVERSE",
+            "qty": 16,
+            "date": "2026-07-22",
+            "time": "3:15 PM",
+            "invoice": "",
+            "remarks": ""
+          },
+          {
+            "type": "FORWARD",
+            "qty": 12,
+            "date": "2026-08-11",
+            "time": "9:05 AM",
+            "invoice": "",
+            "remarks": ""
+          },
+          {
+            "type": "REVERSE",
+            "qty": 10,
+            "date": "2026-08-11",
+            "time": "6:40 PM",
+            "invoice": "",
+            "remarks": ""
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "c-shubham",
+    "name": "Shubham Kashid",
+    "phone": "75072073487",
+    "reverseLogistics": [
+      {
+        "assetId": "a-crate",
+        "assetName": "Crate",
+        "articleNo": "OsSa5a",
+        "measurement": "Crate",
+        "issued": 31,
+        "returned": 31,
+        "outstanding": 0,
+        "lastTransactionDate": "2026-06-02",
+        "deliveredBy": "Mahesh",
+        "ledger": [
+          {
+            "type": "FORWARD",
+            "qty": 31,
+            "date": "2026-05-25",
+            "time": "8:45 AM",
+            "invoice": "",
+            "remarks": ""
+          },
+          {
+            "type": "REVERSE",
+            "qty": 31,
+            "date": "2026-06-02",
+            "time": "2:10 PM",
+            "invoice": "",
+            "remarks": ""
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "c-test",
+    "name": "Test",
+    "phone": "1521521521",
+    "reverseLogistics": [
+      {
+        "assetId": "a-crate",
+        "assetName": "Crate",
+        "articleNo": "OsSa5a",
+        "measurement": "Crate",
+        "issued": 15,
+        "returned": 10,
+        "outstanding": 5,
+        "lastTransactionDate": "2026-08-05",
+        "deliveredBy": "Mahesh",
+        "ledger": [
+          {
+            "type": "FORWARD",
+            "qty": 15,
+            "date": "2026-07-28",
+            "time": "12:30 PM",
+            "invoice": "",
+            "remarks": ""
+          },
+          {
+            "type": "REVERSE",
+            "qty": 10,
+            "date": "2026-08-05",
+            "time": "7:20 PM",
+            "invoice": "",
+            "remarks": ""
+          }
+        ]
+      }
+    ]
+  }
+]

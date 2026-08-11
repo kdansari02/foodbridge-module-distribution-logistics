@@ -1,0 +1,207 @@
+[
+  {
+    "id": "rt-1",
+    "name": "route1 - 11 Aug 2026 12:57",
+    "customers": [
+      "c-rana"
+    ],
+    "staffs": [
+      "s-ajay"
+    ],
+    "created": "2026-08-11T12:57:00"
+  },
+  {
+    "id": "rt-2",
+    "name": "Viman Nagar Clubed Orders - 11 Aug 2026 12:47",
+    "customers": [
+      "c-dinesh",
+      "c-rana",
+      "c-raman"
+    ],
+    "staffs": [
+      "s-nishant"
+    ],
+    "created": "2026-08-11T12:47:00"
+  },
+  {
+    "id": "rt-3",
+    "name": "Evening Route - 11 Aug 2026 12:06",
+    "customers": [
+      "c-ganraj"
+    ],
+    "staffs": [
+      "s-pawan"
+    ],
+    "created": "2026-08-11T12:06:00"
+  },
+  {
+    "id": "rt-4",
+    "name": "rana delivery - 11 Aug 2026 12:03",
+    "customers": [
+      "c-rana"
+    ],
+    "staffs": [
+      "s-kumar"
+    ],
+    "created": "2026-08-11T12:03:00"
+  },
+  {
+    "id": "rt-5",
+    "name": "Viman Nagar Morning Route",
+    "customers": [
+      "c-dinesh",
+      "c-rana",
+      "c-raman",
+      "c-aaimata",
+      "c-ganraj",
+      "c-laxmi",
+      "c-raj"
+    ],
+    "staffs": [
+      "s-nishant",
+      "s-vishvajit"
+    ],
+    "created": "2026-08-11T12:00:00"
+  },
+  {
+    "id": "rt-6",
+    "name": "Gherdi - 11 Aug 2026 11:54",
+    "customers": [
+      "c-shivam"
+    ],
+    "staffs": [
+      "s-nishant",
+      "s-pawan",
+      "s-kumar"
+    ],
+    "created": "2026-08-11T11:54:00"
+  },
+  {
+    "id": "rt-7",
+    "name": "Morning Route 76 - 11 Aug 2026 11:48",
+    "customers": [
+      "c-balaji"
+    ],
+    "staffs": [
+      "s-vishvajit"
+    ],
+    "created": "2026-08-11T11:48:00"
+  },
+  {
+    "id": "rt-8",
+    "name": "Something Rout e 45 - 11 Aug 2026 11:43",
+    "customers": [
+      "c-omsai"
+    ],
+    "staffs": [
+      "s-kumar"
+    ],
+    "created": "2026-08-11T11:43:00"
+  },
+  {
+    "id": "rt-9",
+    "name": "Morning Route 3 - 11 Aug 2026 11:42",
+    "customers": [
+      "c-krishna"
+    ],
+    "staffs": [
+      "s-pawan"
+    ],
+    "created": "2026-08-11T11:42:00"
+  },
+  {
+    "id": "rt-10",
+    "name": "Somethig ROute - 11 Aug 2026 11:41",
+    "customers": [
+      "c-gajanan"
+    ],
+    "staffs": [
+      "s-nishant"
+    ],
+    "created": "2026-08-11T11:41:00"
+  },
+  {
+    "id": "rt-11",
+    "name": "Morning Route - 11 Aug 2026 09:56",
+    "customers": [
+      "c-manjit"
+    ],
+    "staffs": [
+      "s-kumar"
+    ],
+    "created": "2026-08-11T09:56:00"
+  },
+  {
+    "id": "rt-12",
+    "name": "11th Aug 2026 Morning Delivery - 11 Aug 2026 01:11",
+    "customers": [
+      "c-dinesh",
+      "c-ganraj",
+      "c-shreedatta",
+      "c-ganesh"
+    ],
+    "staffs": [
+      "s-vishvajit"
+    ],
+    "created": "2026-08-11T01:11:00"
+  },
+  {
+    "id": "rt-13",
+    "name": "Viman Nagar Route",
+    "customers": [
+      "c-raman"
+    ],
+    "staffs": [
+      "s-nishant"
+    ],
+    "created": "2026-08-10T18:20:00"
+  },
+  {
+    "id": "rt-14",
+    "name": "PCMC Route",
+    "customers": [
+      "c-shivam",
+      "c-raj",
+      "c-balaji",
+      "c-omsai",
+      "c-newbharat"
+    ],
+    "staffs": [
+      "s-pawan"
+    ],
+    "created": "2026-08-10T17:00:00"
+  },
+  {
+    "id": "rt-15",
+    "name": "Swarget Route",
+    "customers": [
+      "c-krishna",
+      "c-gajanan",
+      "c-ganesh",
+      "c-manjit",
+      "c-mahalakshmi"
+    ],
+    "staffs": [
+      "s-kumar"
+    ],
+    "created": "2026-08-10T16:30:00"
+  },
+  {
+    "id": "rt-16",
+    "name": "Hadapsar Route",
+    "customers": [
+      "c-aaimata",
+      "c-laxmi",
+      "c-shreedatta",
+      "c-shreeram",
+      "c-newcust",
+      "c-raman"
+    ],
+    "staffs": [
+      "s-nishant",
+      "s-vishvajit",
+      "s-kumar"
+    ],
+    "created": "2026-08-10T15:10:00"
+  }
+]
