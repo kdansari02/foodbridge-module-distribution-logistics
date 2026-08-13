@@ -35,9 +35,12 @@ input { font-family: inherit; }
 
 /* Full-bleed on real phones */
 @media (max-width: 480px) {
-  body { background: var(--bg); }
-  #dm-app { padding: 0; }
-  .dm-phone { width: 100%; }
+  body { background: var(--bg); overflow-x: hidden; }
+  /* The grid column is `auto`, which sizes to the content's max-content (~458px)
+     and made `.dm-phone { width:100% }` resolve wider than the phone. Constrain
+     it to the viewport so the app truly fills — and no wider than — the screen. */
+  #dm-app { padding: 0; grid-template-columns: minmax(0, 1fr); }
+  .dm-phone { width: 100%; max-width: 100vw; }
   .dm-notch { display: none; }
   .dm-device { border-radius: 0; padding: 0; box-shadow: none; }
   .dm-status { display: none; }
