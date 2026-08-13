@@ -14,6 +14,10 @@
    Everything mutates the in-memory seed data (window.SEED) and re-renders.
    ========================================================================== */
 (function () {
+  // When embedded in the mock platform, its 56px mobile header overlays the top of
+  // this iframe and would hide an open drawer's own header. Flag the document so the
+  // drawer drops below it (see .fb-embedded rule in styles.css). Standalone untouched.
+  try { if (window.self !== window.top) document.documentElement.classList.add("fb-embedded"); } catch (e) { document.documentElement.classList.add("fb-embedded"); }
   const SEED = window.SEED || { routeTemplates: [], customers: [], staff: [], assets: [], orgs: [], deliveryRoute: {} };
 
   // ── Icons ─────────────────────────────────────────────────────────────────
