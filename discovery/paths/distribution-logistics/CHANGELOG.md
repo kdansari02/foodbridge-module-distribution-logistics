@@ -3,6 +3,29 @@
 All notable changes to this HTML replica are recorded here. Each accepted iteration
 is snapshotted under `versions/vN/` and the working copy under `screens/distribution/`.
 
+## v2 — live-delivery-tracking (2026-08-14)
+
+A fourth screen, for the office rather than the driver. Route Planning holds the intent and
+Delivery Management holds the reality, but nothing showed the office what was happening while
+it happened — `route-report` only exists once the driver has finished `settle-route`.
+
+- **Exception strip** — behind schedule, no ping, skipped stop, uncollected cash, handover
+  pending. Clicking one opens that route.
+- **Route rail** — a card per route with a **stop-sequence bar**: one segment per stop,
+  coloured by outcome, mapped 1:1 onto `stop.status` so it cannot drift from the driver app.
+- **Live map** — Leaflet + OpenStreetMap. Vans coloured by state, not identity; numbered stop
+  pins; the planned line; a legend. Positions are simulated by a local clock.
+- **Route drawer** — planned-vs-actual stop timeline, plus **cash** and **stock ladders**
+  (opening → collected → expected handover; loaded → sold → expected back).
+- **Working interventions** — reorder a stop, mark it skipped, reassign it to another route,
+  message the driver, acknowledge alerts. All mutate the seed and re-render.
+
+Mobile: the route rail becomes a bottom sheet behind a `Routes · N` footer button, the
+exception chips scroll sideways in two rows, and the map takes 68% of the viewport.
+
+Snapshotted as `versions/v2/`. Design decisions and divergences:
+`discovery/instructions/addendum-004-live-delivery-tracking.md`.
+
 ## v1 — working-actions (2026-08-11)
 
 First build of the Distribution & Logistics replica, mirroring the `products-directory`

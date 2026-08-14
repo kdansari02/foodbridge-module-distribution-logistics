@@ -2,13 +2,16 @@
 
 Static **HTML replica** of the storefront-frontend **Distribution & Logistics module**,
 built for the `foodbridge-module-distribution-logistics` discovery workflow. It reproduces
-the three live admin screens as a no-build, click-through prototype for both **desktop and mobile**.
+the three live admin screens as a no-build, click-through prototype for both **desktop and mobile**,
+plus a fourth screen — **Live Delivery Tracking** — which has no live counterpart yet and was
+designed here.
 
 | Screen | Route (live app) | Source component |
 | --- | --- | --- |
 | Route Planning | `/manage-routes` | `storefront-frontend/src/pages/ManageRoutes.jsx` |
 | Logistic Returns | `/reverse-logistics/dashboard` | `pages/reverseLogistics/ReverseLogisticDashboard.jsx` + `ReturnableProducts.jsx` |
 | Delivery Management | `/route-delivery` | `storefront-frontend/src/route-delivery-app/` |
+| Live Delivery Tracking | *new — no live counterpart yet* | designed in `discovery/instructions/addendum-004-live-delivery-tracking.md` |
 
 ## What it replicates
 
