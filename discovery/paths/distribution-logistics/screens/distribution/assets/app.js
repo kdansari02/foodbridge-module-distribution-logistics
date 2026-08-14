@@ -1,7 +1,8 @@
 /* ==========================================================================
    Distribution & Logistics — HTML replica of the live "QA store" storefront
    admin. Vanilla JS, no build step.
-   Screens: FB.mount('route-planning' | 'logistic-returns' | 'delivery-management').
+   Screens: FB.mount('route-planning' | 'logistic-returns' | 'delivery-management' | 'live-tracking').
+   'live-tracking' is implemented in tracking.js, which only that page loads.
 
      • Route Planning     — Delivery Templates table, add/edit drawer with
                             multi-select Customers + Staff (assignment badges),
@@ -212,6 +213,7 @@
       { label: "Route Planning", key: "route-planning", href: "route-planning.html" },
       { label: "Delivery Management", key: "delivery-management", href: "delivery-management.html" },
       { label: "Logistic Returns", key: "logistic-returns", href: "logistic-returns.html" },
+      { label: "Live Delivery Tracking", key: "live-tracking", href: "live-tracking.html" },
     ] },
     { label: "Production", icon: I.factory, group: true, collapsed: true, children: [] },
     { label: "Inventory", icon: I.inv, group: true, collapsed: true, children: [] },
@@ -786,7 +788,7 @@
     render();
   }
 
-  const TITLES = { "route-planning": "Route Planning", "logistic-returns": "Logistic Returns", "delivery-management": "Delivery Management" };
+  const TITLES = { "route-planning": "Route Planning", "logistic-returns": "Logistic Returns", "delivery-management": "Delivery Management", "live-tracking": "Live Delivery Tracking" };
   window.FB = {
     mount(screen) {
       document.getElementById("app").innerHTML = shell(screen, TITLES[screen]);
@@ -794,6 +796,10 @@
       if (screen === "route-planning") screenRoutePlanning();
       else if (screen === "logistic-returns") screenLogisticReturns();
       else if (screen === "delivery-management") screenDeliveryManagement();
+      else if (screen === "live-tracking") {
+        if (window.FBTrack) window.FBTrack.screen();
+        else document.getElementById("content").innerHTML = '<p style="padding:20px;color:#991b1b">tracking.js did not load.</p>';
+      }
     },
   };
 })();
