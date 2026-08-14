@@ -3,7 +3,7 @@
 All notable changes to this HTML replica are recorded here. Each accepted iteration
 is snapshotted under `versions/vN/` and the working copy under `screens/distribution/`.
 
-## Unreleased — Live Delivery Tracking (2026-08-14)
+## v2 — live-delivery-tracking (2026-08-14)
 
 A fourth screen, for the office rather than the driver. Route Planning holds the intent and
 Delivery Management holds the reality, but nothing showed the office what was happening while
@@ -20,7 +20,11 @@ it happened — `route-report` only exists once the driver has finished `settle-
 - **Working interventions** — reorder a stop, mark it skipped, reassign it to another route,
   message the driver, acknowledge alerts. All mutate the seed and re-render.
 
-Design decisions and divergences: `discovery/instructions/addendum-004-live-delivery-tracking.md`.
+Mobile: the route rail becomes a bottom sheet behind a `Routes · N` footer button, the
+exception chips scroll sideways in two rows, and the map takes 68% of the viewport.
+
+Snapshotted as `versions/v2/`. Design decisions and divergences:
+`discovery/instructions/addendum-004-live-delivery-tracking.md`.
 
 ## v1 — working-actions (2026-08-11)
 

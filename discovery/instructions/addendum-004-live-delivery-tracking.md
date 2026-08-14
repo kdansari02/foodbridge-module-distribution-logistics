@@ -1,6 +1,6 @@
 # Addendum 004 — Live Delivery Tracking (admin monitoring)
 
-**Status:** intent logged, iteration in progress (rule R4).
+**Status:** accepted and released. Snapshotted as `../paths/distribution-logistics/versions/v2/` (rule R6).
 **Path:** `../paths/distribution-logistics/screens/distribution/live-tracking.html`
 **Inputs:** verbal brief — *"admin/owner management, you can view/monitor delivery movement …
 how delivery is being executed — monitoring by admin in office, e.g. live status (co-ordinates),
@@ -83,4 +83,36 @@ route status maps to the lifecycle stages above.
 
 ## Outcome
 
-*Appended after the iteration is reviewed (rule R4).*
+Accepted and released 2026-08-14. Snapshotted as `../paths/distribution-logistics/versions/v2/`,
+which is v1 plus this screen — the first version of this path to carry a screen with no live
+counterpart.
+
+### What shipped
+
+| Region | State |
+| ------ | ----- |
+| Exception strip | Built. Behind schedule · no ping · skipped stop · uncollected cash · handover pending. Clicking one opens that route. |
+| Route rail + stop-sequence bar | Built. One segment per stop, coloured by outcome, driven by `stop.status`. |
+| Live map | Built. Leaflet + OSM, vans coloured by state, numbered stop pins, planned line, legend. |
+| Route drawer | Built. Planned-vs-actual timeline, cash ladder, stock ladder, office messages. |
+| Interventions | Built and working: reorder, mark skipped, reassign, message, acknowledge. |
+| Mobile | Rail becomes a bottom sheet behind a footer button; chips scroll in two rows; map takes 68% of the viewport. |
+
+### Defects found by clicking, not by reading
+
+| Found | Cause | Fix |
+| ----- | ----- | --- |
+| Stock ladder showed 85 units sold from 60 loaded | Seed gave each route less stock than its own stops needed; the `Math.max(0, …)` clamp rendered "0 back" instead of a negative and hid it | Corrected the seed; all five routes now reconcile on both stock and cash |
+| The map painted over the route drawer | Leaflet's own layers (panes 400, controls 800, `.leaflet-top` 1000) resolved in the **root** stacking context, because nothing between the map and `<body>` created one. They outranked the drawer at 151 | Gave the map wrapper its own stacking context, confining every Leaflet z-index to it. Raising the drawer instead would have broken this module's scale and only held until a plugin picked a bigger number |
+| Drawer was 353px wide on a 375px phone | `width: 100%` lost to the base rule's `max-width: 94vw` | Released `max-width` at the phone breakpoint too |
+
+### Carried into the SSOTs
+
+| Decision | Feeds |
+| -------- | ----- |
+| Route stage vocabulary (`ready → loading → on-route → settling → done`) and its mapping onto the driver lifecycle | SSOT-01 state machine |
+| `stop.status` stays `pending \| delivered \| skipped` across driver and office | SSOT-01, SSOT-02 |
+| Schedule delta is derived from planned-vs-actual on a **completed** stop, never estimated | SSOT-05 workflow |
+| Cash ladder (`opening + collected = expected at handover`) and stock ladder (`loaded − sold = expected back`) as the settlement contract | SSOT-02 domain model |
+| Last-ping age is a first-class exception, not a display detail | SSOT-01, SSOT-05 |
+| Office interventions that mutate a route mid-flight (reorder, reassign, skip) | SSOT-05 workflow, SSOT-07 collaboration contract |
