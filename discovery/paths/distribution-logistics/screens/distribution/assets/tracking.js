@@ -121,6 +121,8 @@
     msg: '<svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.4 8.4 0 0 1-9 8.4 8.4 8.4 0 0 1-3.8-.9L3 21l1.9-5.2a8.4 8.4 0 0 1 3.6-11.4 8.4 8.4 0 0 1 12.5 7.1z"/></svg>',
     x: '<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg>',
     up: '<svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m18 15-6-6-6 6"/></svg>',
+    list: '<svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01"/></svg>',
+    target: '<svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3"/><circle cx="12" cy="12" r="2.5"/></svg>',
     move: '<svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>',
   };
 
@@ -470,6 +472,7 @@
     const clock = $("#tkClock");
     if (clock) clock.textContent = t.clock;
     wireRail();
+    renderFooter();
     drawMap();
   }
 
@@ -481,6 +484,91 @@
       .map((e) => '<button class="tk-ex ' + e.sev + '" data-ex="' + e.routeId + '">' + ICO[e.icon] + "<span>" + esc(e.text) + "</span></button>")
       .join("");
   }
+
+  /* ── Mobile: footer + route sheet ────────────────────────────────────────
+     Below 768px the rail is hidden so the map gets the whole screen, and the
+     route list moves into a bottom sheet opened from the footer. Both reuse
+     the module's own .mobile-footer / .sheet classes rather than introducing
+     a second pattern. */
+  const isMobile = () => window.matchMedia("(max-width: 768px)").matches;
+
+  function renderFooter() {
+    let f = document.getElementById("mfooter");
+    if (!isMobile()) { if (f) f.remove(); return; }
+    if (!f) {
+      f = document.createElement("div");
+      f.className = "mobile-footer";
+      f.id = "mfooter";
+      document.querySelector(".main").appendChild(f);
+    }
+    const n = T().routes.length;
+    const alerts = exceptions().length;
+    f.innerHTML =
+      '<button class="mf-btn primary" data-mf="routes"><span class="mf-ic">' + ICO.list + "</span>Routes · " + n + "</button>" +
+      '<button class="mf-btn' + (state.selected ? " accent" : "") + '" data-mf="fit"><span class="mf-ic">' + ICO.target + "</span>" +
+      (state.selected ? "Show all" : "Recentre") + "</button>" +
+      '<button class="mf-btn' + (alerts ? " accent" : "") + '" data-mf="alerts"><span class="mf-ic">' + ICO.clock + "</span>Alerts · " + alerts + "</button>";
+    Array.from(f.querySelectorAll("[data-mf]")).forEach(function (b) {
+      b.addEventListener("click", function () {
+        const k = b.getAttribute("data-mf");
+        if (k === "routes") return openSheet();
+        if (k === "fit") { state.selected = null; state._framed = false; state._framedFor = null; render(); return; }
+        if (k === "alerts") { const st = document.getElementById("tkStrip"); if (st) st.scrollIntoView({ behavior: "smooth", block: "start" }); }
+      });
+    });
+  }
+
+  function closeSheet() {
+    const el = document.getElementById("tkSheet");
+    if (!el) return;
+    el.classList.remove("show");
+    setTimeout(function () { el.remove(); }, 220);
+  }
+
+  function openSheet() {
+    closeSheet();
+    const el = document.createElement("div");
+    el.className = "sheet-scrim";
+    el.id = "tkSheet";
+    el.innerHTML =
+      '<div class="sheet" role="dialog" aria-modal="true" aria-label="Today’s routes">' +
+      '<div class="grip"></div>' +
+      '<div class="sheet-head"><span style="width:34px"></span><h3>Today’s routes</h3>' +
+      '<button class="s-x" data-sheetclose aria-label="Close">' + ICO.x + "</button></div>" +
+      '<div class="tk-sheet-list">' + T().routes.map(railCard).join("") + "</div>" +
+      "</div>";
+    document.body.appendChild(el);
+    requestAnimationFrame(function () { el.classList.add("show"); });
+
+    el.addEventListener("click", function (e) {
+      if (e.target === el || e.target.closest("[data-sheetclose]")) closeSheet();
+    });
+    Array.from(el.querySelectorAll("[data-route]")).forEach(function (b) {
+      b.addEventListener("click", function () {
+        const id = b.getAttribute("data-route");
+        closeSheet();
+        // Tapping a route on mobile is a request to SEE it: frame the map on it
+        // and open its detail, since the rail is not on screen to fall back to.
+        state.selected = id;
+        state._framed = false;
+        state._framedFor = null;
+        openDrawer(id);
+      });
+    });
+  }
+
+  /* The map has to fill whatever the topbar, strip and footer leave behind, and
+     the topbar grows when the page title wraps. Measure it rather than
+     hardcoding a number that is wrong on half the devices. */
+  function sizeMobile() {
+    if (!isMobile()) { document.documentElement.style.removeProperty("--tk-chrome"); return; }
+    const top = document.querySelector(".topbar");
+    const foot = document.getElementById("mfooter");
+    const pad = 26; // .content padding-top (14) + the wrap's own gap (12)
+    const h = (top ? top.getBoundingClientRect().height : 68) + (foot ? foot.getBoundingClientRect().height : 62) + pad;
+    document.documentElement.style.setProperty("--tk-chrome", Math.round(h) + "px");
+  }
+
 
   /* ── Render ─────────────────────────────────────────────────────────────── */
   const state = { selected: null, drawer: null, focusStop: null, reassign: null, composing: false, _framed: false, _framedFor: null };
@@ -533,6 +621,9 @@
     const mi = $("#tkMsgInput");
     if (mi) { mi.focus(); mi.addEventListener("keydown", (e) => { if (e.key === "Enter") act("send"); }); }
 
+    renderFooter();
+    sizeMobile();
+
     // Leaflet needs a re-measure after its container is re-created, and the
     // fresh map has to be framed again.
     map = null;
@@ -547,6 +638,13 @@
       render();
       clearInterval(timer);
       timer = setInterval(tick, 4000);
+      // Crossing the breakpoint swaps the whole layout, so re-render on resize.
+      let wasMobile = isMobile();
+      window.addEventListener("resize", () => {
+        sizeMobile();
+        if (map) map.invalidateSize();
+        if (isMobile() !== wasMobile) { wasMobile = isMobile(); closeSheet(); render(); }
+      });
     },
   };
 })();

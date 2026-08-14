@@ -173,15 +173,59 @@
 .tk-empty { font-size: 13px; color: var(--muted); margin: 0; }
 
 /* ── Narrow / embedded ────────────────────────────────────────────────────── */
-@media (max-width: 1023px) {
+/* Tablet: the rail sits above the map rather than beside it. */
+@media (max-width: 1023px) and (min-width: 769px) {
   .tk-main { grid-template-columns: 1fr; grid-template-rows: auto 1fr; }
   .tk-rail { max-height: 240px; }
   .tk-wrap { height: auto; min-height: 0; }
   .tk-map-wrap { height: 60vh; min-height: 360px; }
 }
+
+/* ── Phone (matches the module's own 768px breakpoint) ─────────────────────
+   The rail leaves the page entirely: it becomes a bottom sheet opened from the
+   footer, so the map gets everything the chrome does not need. --tk-chrome is
+   measured in JS because the topbar grows when the page title wraps. */
+@media (max-width: 768px) {
+  .tk-wrap { height: calc(100dvh - var(--tk-chrome, 150px)); min-height: 320px; gap: 10px; }
+  .tk-rail, .tk-clear-sel { display: none; }
+  .tk-main { grid-template-columns: 1fr; grid-template-rows: 1fr; }
+  .tk-map-wrap { height: auto; min-height: 0; }
+
+  /* Exception chips: two rows that scroll sideways, so a long alert list never
+     eats the map's height. */
+  .tk-strip {
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-rows: repeat(2, auto);
+    grid-auto-columns: max-content;
+    gap: 7px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior-x: contain;
+    padding-bottom: 1px;
+    margin: 0 -12px;          /* bleed to the screen edges */
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+  .tk-strip::-webkit-scrollbar { display: none; }
+  .tk-ex { white-space: nowrap; height: 28px; font-size: 12px; }
+  .tk-clear { grid-row: span 2; align-self: center; }
+
+  /* The legend would sit under the footer; lift and shrink it. */
+  .tk-legend { gap: 9px; font-size: 10.5px; padding: 5px 9px; left: 8px; bottom: 8px; }
+}
+
+/* Route sheet — the rail's contents, in the module's own bottom sheet. */
+.tk-sheet-list { display: flex; flex-direction: column; gap: 8px; padding: 12px 14px 18px; }
+.tk-sheet-list .tk-card { border-radius: 12px; padding: 12px 13px; }
+.tk-sheet-list .tk-card.active { border-color: var(--emerald-600); box-shadow: 0 0 0 3px var(--emerald-50); }
+
 @media (max-width: 640px) {
   .tk-dr-grid { grid-template-columns: repeat(2, 1fr); }
-  .tk-drawer { width: 100%; }
+  /* max-width also has to be released, or the base rule's 94vw still wins. */
+  .tk-drawer { width: 100%; max-width: 100%; }
 }
 @media (prefers-reduced-motion: reduce) {
   .tk-seq i.now, .tk-van::after { animation: none; }
