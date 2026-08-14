@@ -502,18 +502,15 @@
       document.querySelector(".main").appendChild(f);
     }
     const n = T().routes.length;
-    const alerts = exceptions().length;
     f.innerHTML =
       '<button class="mf-btn primary" data-mf="routes"><span class="mf-ic">' + ICO.list + "</span>Routes · " + n + "</button>" +
       '<button class="mf-btn' + (state.selected ? " accent" : "") + '" data-mf="fit"><span class="mf-ic">' + ICO.target + "</span>" +
-      (state.selected ? "Show all" : "Recentre") + "</button>" +
-      '<button class="mf-btn' + (alerts ? " accent" : "") + '" data-mf="alerts"><span class="mf-ic">' + ICO.clock + "</span>Alerts · " + alerts + "</button>";
+      (state.selected ? "Show all" : "Recentre") + "</button>";
     Array.from(f.querySelectorAll("[data-mf]")).forEach(function (b) {
       b.addEventListener("click", function () {
         const k = b.getAttribute("data-mf");
         if (k === "routes") return openSheet();
-        if (k === "fit") { state.selected = null; state._framed = false; state._framedFor = null; render(); return; }
-        if (k === "alerts") { const st = document.getElementById("tkStrip"); if (st) st.scrollIntoView({ behavior: "smooth", block: "start" }); }
+        if (k === "fit") { state.selected = null; state._framed = false; state._framedFor = null; render(); }
       });
     });
   }
