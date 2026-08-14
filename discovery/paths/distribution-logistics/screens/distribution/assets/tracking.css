@@ -75,7 +75,18 @@
 .tk-eta { margin-left: auto; font-variant-numeric: tabular-nums; }
 
 /* ── Map ──────────────────────────────────────────────────────────────────── */
-.tk-map-wrap { position: relative; border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; min-height: 0; }
+/* `isolation: isolate` is load-bearing, not decoration.
+   Leaflet assigns its own layers high z-indexes — panes 400, controls 800,
+   .leaflet-top/.leaflet-bottom 1000. Nothing between the map and <body> created
+   a stacking context, so those values resolved in the ROOT context and painted
+   over the route drawer (z-151), which sits well inside this module's own scale
+   (drawer 90/95 · modal 100 · sheet 130 · toast 200).
+   Giving the wrapper a stacking context confines every Leaflet z-index to it, so
+   the map can never again outrank anything outside itself. Fixing this by raising
+   the drawer instead would only work until a Leaflet plugin picked a bigger
+   number. */
+.tk-map-wrap { position: relative; z-index: 0; isolation: isolate;
+  border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; min-height: 0; }
 .tk-map { position: absolute; inset: 0; }
 .tk-legend { position: absolute; left: 10px; bottom: 10px; z-index: 500; display: flex; gap: 12px; flex-wrap: wrap;
   background: rgba(255, 255, 255, .94); border: 1px solid var(--line); border-radius: 8px; padding: 7px 11px;
